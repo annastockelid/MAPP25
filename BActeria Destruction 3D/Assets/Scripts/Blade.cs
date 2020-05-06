@@ -6,6 +6,7 @@ public class Blade : MonoBehaviour
 {
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;
+ 
 
     bool isCutting = false;
 
@@ -22,6 +23,8 @@ public class Blade : MonoBehaviour
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
+
+  
 
     }
 
@@ -64,6 +67,7 @@ public class Blade : MonoBehaviour
         currentBladeTrail = Instantiate(bladeTrailPrefab, transform);
         previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
         circleCollider.enabled = false;
+
     }
 
     void StopCutting()
