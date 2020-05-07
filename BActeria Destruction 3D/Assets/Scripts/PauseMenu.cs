@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public GameObject settingsMenu = null;
     
     void Update()
     {
@@ -48,5 +49,10 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting game");
         Application.Quit();
+    }
+
+    public void InGameSettings()
+    {
+        settingsMenu.SetActive(true);
     }
 }
