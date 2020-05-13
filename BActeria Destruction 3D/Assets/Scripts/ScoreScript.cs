@@ -9,15 +9,18 @@ public class ScoreScript : MonoBehaviour
 
     public static int scoreValue = 0;
     Text score;
+    
 
     void Start()
     {
-        score = GetComponent<Text>(); 
+        score = GetComponent<Text>();
+        
     }
 
 
     void Update()
     {
         score.text = "Score: " + scoreValue;
+        
     }
 }
