@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fruit : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
 
     public GameObject fruitSlicedPrefab;

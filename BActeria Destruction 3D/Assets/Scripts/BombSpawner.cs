@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitSpawner : MonoBehaviour
+public class BombSpawner : MonoBehaviour
 {
 
     public GameObject fruitPrefab;
