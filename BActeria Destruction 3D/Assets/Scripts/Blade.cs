@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Blade : MonoBehaviour
 {
+    public GameObject oneDown;
     public GameObject oneUp;
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;
@@ -80,11 +81,28 @@ public class Blade : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Instantiate(oneUp,
-            new Vector3(transform.position.x,
-                         transform.position.y + 1f,
-                         transform.position.z),
-                          Quaternion.identity);
-        Destroy(other.gameObject);
+        if (other.tag == "Bacteria")
+        {
+            Instantiate(oneUp,
+                 new Vector3(transform.position.x,
+                             transform.position.y + 1f,
+                             transform.position.z),
+                             Quaternion.identity);
+            Destroy(other.gameObject);
+
+        }
+
+        if(other.tag == "Pill")
+        {
+            Instantiate(oneDown,
+                 new Vector3(transform.position.x,
+                             transform.position.y + 1f,
+                             transform.position.z),
+                             Quaternion.identity);
+            Destroy(other.gameObject);
+        }
+
+
     }
+    
 }
