@@ -476,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9940d3ec3bb38fb4ea5cfddcdb661128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneDown: {fileID: 2480334932065108323, guid: d0c14475419e4b143870af6301026d11, type: 3}
   oneUp: {fileID: 5808386899181461193, guid: e51cafea9522962408f1adc2689d53ac, type: 3}
   bladeTrailPrefab: {fileID: 6315050613348711195, guid: 9bc2514a5240cef46b048a1b7cf6faf7,
     type: 3}
