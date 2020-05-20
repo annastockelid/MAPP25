@@ -63,4 +63,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         GameOverUI.SetActive(true);
     }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    }
 }
+
