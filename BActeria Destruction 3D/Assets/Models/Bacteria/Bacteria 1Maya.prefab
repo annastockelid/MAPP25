@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bacteraSlicedPrefab: {fileID: 4617851567334625477, guid: 30855f9aba88221459e24c9d849f2e28,
     type: 3}
+  oneUp: {fileID: 5808386899181461193, guid: e51cafea9522962408f1adc2689d53ac, type: 3}
   startForce: 13
 --- !u!1001 &1269149447131645720
 PrefabInstance:

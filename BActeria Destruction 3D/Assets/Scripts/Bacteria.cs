@@ -6,6 +6,7 @@ public class Bacteria : MonoBehaviour
 {
     public GameObject bacteraSlicedPrefab;
 
+
     Rigidbody2D rb;
     public float startForce = 5f;
 
