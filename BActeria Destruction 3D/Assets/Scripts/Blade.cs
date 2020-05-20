@@ -8,6 +8,7 @@ public class Blade : MonoBehaviour
     public GameObject oneUp;
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;
+    public PauseMenu pauseMenu;
  
 
     bool isCutting = false;
@@ -93,7 +94,7 @@ public class Blade : MonoBehaviour
             //Destroy(other.gameObject);
         }
 
-        if (other.tag == "Bacteria")
+        else if (other.tag == "Bacteria")
         {
             Instantiate(oneUp,
                  new Vector3(transform.position.x,
@@ -104,6 +105,16 @@ public class Blade : MonoBehaviour
 
         }
 
+        else if (other.tag == "Bomb")
+        {
+            pauseMenu.GameOver();
+
+      
+        }
+
+
     }
+
+   
     
 }

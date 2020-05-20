@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     public GameObject settingsMenu = null;
+
+    public GameObject GameOverUI;
     
     void Update()
     {
@@ -54,5 +56,11 @@ public class PauseMenu : MonoBehaviour
     public void InGameSettings()
     {
         settingsMenu.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        GameOverUI.SetActive(true);
     }
 }
