@@ -81,16 +81,7 @@ public class Blade : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Bacteria")
-        {
-            Instantiate(oneUp,
-                 new Vector3(transform.position.x,
-                             transform.position.y + 1f,
-                             transform.position.z),
-                             Quaternion.identity);
-            Destroy(other.gameObject);
 
-        }
 
         if(other.tag == "Pill")
         {
@@ -99,9 +90,19 @@ public class Blade : MonoBehaviour
                              transform.position.y + 1f,
                              transform.position.z),
                              Quaternion.identity);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
 
+        if (other.tag == "Bacteria")
+        {
+            Instantiate(oneUp,
+                 new Vector3(transform.position.x,
+                             transform.position.y + 1f,
+                             transform.position.z),
+                             Quaternion.identity);
+            //Destroy(other.gameObject);
+
+        }
 
     }
     
