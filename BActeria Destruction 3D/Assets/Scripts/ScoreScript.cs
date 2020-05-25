@@ -23,4 +23,11 @@ public class ScoreScript : MonoBehaviour
         score.text = "Score: " + scoreValue;
         
     }
+
+    public void ResetScore()
+    {
+        scoreValue = 0;
+
+    }
+
 }
