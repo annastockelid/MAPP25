@@ -6,14 +6,13 @@ public class PlaySoundOnClick : MonoBehaviour
 {
 
     public AudioSource sliceSound;
+ 
 
-    public AudioSource beepSound;
 
     void Start()
     {
-        beepSound = GetComponent<AudioSource>();
+   
     }
-
 
     void Update()
     {
@@ -21,14 +20,8 @@ public class PlaySoundOnClick : MonoBehaviour
         {
             sliceSound.Play();
         }
-        
-     
+       
     }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Bacteria")
-        {
-            beepSound.Play();
-        }
-    }
+
+
 }

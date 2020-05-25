@@ -9,6 +9,8 @@ public class Blade : MonoBehaviour
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;
     public PauseMenu pauseMenu;
+    public AudioSource beepSound;
+    public AudioSource buzzSound;
 
 
     private Shake shake;
@@ -31,7 +33,6 @@ public class Blade : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
 
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
-        
 
     }
 
@@ -84,7 +85,7 @@ public class Blade : MonoBehaviour
         Destroy(currentBladeTrail, 2f);
         circleCollider.enabled = false;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
 
 
@@ -95,7 +96,9 @@ public class Blade : MonoBehaviour
                              transform.position.y + 1f,
                              transform.position.z),
                              Quaternion.identity);
+            buzzSound.Play();
             shake.CamShake();
+
         }
 
         else if (other.tag == "Bacteria")
@@ -105,19 +108,15 @@ public class Blade : MonoBehaviour
                              transform.position.y + 1f,
                              transform.position.z),
                              Quaternion.identity);
-
+            beepSound.Play();
         }
 
         else if (other.tag == "Bomb")
         {
             pauseMenu.GameOver();
 
-      
         }
 
-
     }
-
-   
     
 }
