@@ -7,6 +7,8 @@ public class Bacteria : MonoBehaviour
     public GameObject bacteraSlicedPrefab;
 
 
+
+
     Rigidbody2D rb;
     public float startForce = 5f;
 
@@ -14,6 +16,8 @@ public class Bacteria : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(transform.up * startForce, ForceMode2D.Impulse);
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -21,6 +25,8 @@ public class Bacteria : MonoBehaviour
         if (col.tag == "Blade")
         {
             ScoreScript.scoreValue += 1; //Lägger till 1 på poäng
+
+
 
             Vector3 direction = (col.transform.position - transform.position).normalized;
 
