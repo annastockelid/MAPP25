@@ -9,6 +9,8 @@ public class Blade : MonoBehaviour
     public GameObject bladeTrailPrefab;
     public float minCuttingVelocity = .001f;
     public PauseMenu pauseMenu;
+
+    private Shake shake;
  
 
     bool isCutting = false;
@@ -27,7 +29,7 @@ public class Blade : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
 
-  
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
 
     }
 
@@ -92,6 +94,7 @@ public class Blade : MonoBehaviour
                              transform.position.z),
                              Quaternion.identity);
             //Destroy(other.gameObject);
+            shake.CamShake();
         }
 
         else if (other.tag == "Bacteria")
