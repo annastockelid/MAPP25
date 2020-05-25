@@ -8,6 +8,7 @@ TagManager:
   - Bacteria
   - Pill
   - Bomb
+  - ScreenShake
   layers:
   - Default
   - TransparentFX
