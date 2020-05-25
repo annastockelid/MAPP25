@@ -10,6 +10,7 @@ public class Blade : MonoBehaviour
     public float minCuttingVelocity = .001f;
     public PauseMenu pauseMenu;
 
+
     private Shake shake;
  
 
@@ -30,6 +31,7 @@ public class Blade : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>();
 
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        
 
     }
 
@@ -93,7 +95,6 @@ public class Blade : MonoBehaviour
                              transform.position.y + 1f,
                              transform.position.z),
                              Quaternion.identity);
-            //Destroy(other.gameObject);
             shake.CamShake();
         }
 
@@ -104,7 +105,6 @@ public class Blade : MonoBehaviour
                              transform.position.y + 1f,
                              transform.position.z),
                              Quaternion.identity);
-            //Destroy(other.gameObject);
 
         }
 
