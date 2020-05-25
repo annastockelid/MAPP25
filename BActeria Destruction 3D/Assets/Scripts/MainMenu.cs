@@ -5,14 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public Animator transition;
-    public float transitionsTime = 1f;
-
     public void PlayGame()
     {
-       StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
@@ -23,14 +18,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator LoadLevel (int levelIndex)
-    {
-        transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitionsTime);
-
-        SceneManager.LoadScene(levelIndex);
-    }
 
 
 
