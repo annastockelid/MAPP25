@@ -11,9 +11,10 @@ public class Blade : MonoBehaviour
     public PauseMenu pauseMenu;
     public AudioSource beepSound;
     public AudioSource buzzSound;
+	public AudioSource bombSound;
 
 
-    private Shake shake;
+	private Shake shake;
  
 
     bool isCutting = false;
@@ -114,8 +115,10 @@ public class Blade : MonoBehaviour
         else if (other.tag == "Bomb")
         {
             pauseMenu.GameOver();
+			bombSound.Play();
 
-        }
+
+		}
 
     }
     
