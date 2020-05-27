@@ -6,21 +6,24 @@ using UnityEngine.UI;
 public class HighScoreScript : MonoBehaviour
 {
     public int scoreValue;
-    public Text highScore;
+
+    private int highscore;
+    public Text highscoreText;
 
     void Start()
     {
-        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        highscore = PlayerPrefs.GetInt("Score");
+        highscoreText.text = "BEST:" + highscore.ToString();
     }
 
-   
-    void Update()
+
+    public void setHighscore()
     {
-        if (scoreValue > PlayerPrefs.GetInt("HighScore", 0)) 
+        if (scoreValue > highscore)
         {
-            PlayerPrefs.SetInt("HighScore", scoreValue);
-            highScore.text = scoreValue.ToString();
+            highscore = scoreValue;
+            highscoreText.text = "BEST:" + highscore.ToString();
+            PlayerPrefs.SetInt("Score", highscore);
         }
- 
     }
 }

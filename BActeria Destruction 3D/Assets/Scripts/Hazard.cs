@@ -23,7 +23,7 @@ public class Hazard : MonoBehaviour
         if (col.tag == "Blade")
         {
 
-            ScoreScript.scoreValue -= 1; //Lägger till 1 på poäng
+            ScoreScript.Instance.IncrementScore(-1);
 
             Vector3 direction = (col.transform.position - transform.position).normalized;
 

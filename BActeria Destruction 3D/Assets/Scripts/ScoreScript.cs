@@ -6,28 +6,52 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
 
+    public static ScoreScript Instance { set; get; }
 
-    public static int scoreValue = 0;
-    Text score;
-    
+    public static int score;
+    private int highscore;
+    public Text scoreText;
+    public Text highscoreText;
+
+
+    private void Awake()
+    {
+        Instance = this;  
+    }
 
     void Start()
     {
-        score = GetComponent<Text>();
-        
+        NewGame();
     }
 
+    private void NewGame()
+    {
+        score = 0;
+        scoreText.text = score.ToString();
+        highscore = PlayerPrefs.GetInt("Score");
+        highscoreText.text = "BEST:" + highscore.ToString();
+    }
 
     void Update()
     {
-        score.text = "Score: " + scoreValue;
         
     }
 
     public void ResetScore()
     {
-        scoreValue = 0;
-
+        score = 0;
     }
 
+    public void IncrementScore(int scoreAmount)
+    {
+        score += scoreAmount;
+        scoreText.text = score.ToString();
+
+        if (score > highscore)
+        {
+            highscore = score;
+            highscoreText.text = "BEST:" + highscore.ToString();
+            PlayerPrefs.SetInt("Score", highscore);
+        }
+    }
 }
