@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 8189901119777500189}
   - component: {fileID: 8189901119777500187}
   - component: {fileID: 8189901119777500186}
+  - component: {fileID: 578380638948442388}
   m_Layer: 5
   m_Name: Entry_LeaderBoard
   m_TagString: Untagged
@@ -461,6 +462,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &578380638948442388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189901119777500188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f577c815b2f28ae42a851df022a6e70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entryNameText: {fileID: 1252186320177230315}
+  entryScoreText: {fileID: 1098591069865052486}
 --- !u!1 &8591802040309482070
 GameObject:
   m_ObjectHideFlags: 0
