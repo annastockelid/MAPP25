@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsMenu = null;
 
     public GameObject GameOverUI;
+
+    public GameObject ExitButton;
     
     void Update()
     {
@@ -62,6 +64,9 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0;
         GameOverUI.SetActive(true);
+
+        ExitButton.SetActive(false);
+
     }
 
     public void PlayGame()
