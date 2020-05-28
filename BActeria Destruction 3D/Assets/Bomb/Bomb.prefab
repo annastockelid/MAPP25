@@ -87,6 +87,7 @@ MonoBehaviour:
   fruitSlicedPrefab: {fileID: 935175122585547425, guid: a1c63c7376daa4f63aaea7caa2f803ae,
     type: 3}
   startForce: 10
+  explosion: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
 --- !u!114 &3955972413805855963
 MonoBehaviour:
   m_ObjectHideFlags: 0

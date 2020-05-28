@@ -10,6 +10,8 @@ public class Bomb : MonoBehaviour
 
     Rigidbody2D rb;
 
+	public GameObject explosion;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,13 +22,16 @@ public class Bomb : MonoBehaviour
     {
         if (col.tag == "Blade")
         {
-            Vector3 direction = (col.transform.position - transform.position).normalized;
+			Instantiate(explosion, transform.position, Quaternion.identity);
+			Vector3 direction = (col.transform.position - transform.position).normalized;
 
             Quaternion rotation = Quaternion.LookRotation(direction);
 
             GameObject slicedFruit = Instantiate(fruitSlicedPrefab, transform.position, rotation);
             Destroy(slicedFruit, 3f);
             Destroy(gameObject);
+
+			
         }
     }
 
