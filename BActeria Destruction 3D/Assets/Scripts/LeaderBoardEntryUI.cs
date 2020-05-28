@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
+using TMPro;
 using UnityEngine;
 
-public class LeaderBoardEntryUI : MonoBehaviour
+namespace BacteriaDestruction.LeaderBoards
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LeaderBoardEntryUI : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private TextMeshProUGUI entryNameText = null;
+        [SerializeField] private TextMeshProUGUI entryScoreText = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Initialise(LeaderBoardEntryData leaderBoardEntryData )
+        {
+            entryNameText.text = leaderBoardEntryData.enrtyName;
+            entryScoreText.text = leaderBoardEntryData.enrtyScore.ToString();
+        }
     }
 }
+

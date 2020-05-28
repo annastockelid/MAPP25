@@ -1,12 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DapperDino.LeaderBoards
+namespace BacteriaDestruction.LeaderBoards
 {
+    [Serializable]
     public struct LeaderBoardEntryData 
     {
-        public string enrtyName
+        
+        public string enrtyName;
+        public int enrtyScore;
+
     }
 }
 
