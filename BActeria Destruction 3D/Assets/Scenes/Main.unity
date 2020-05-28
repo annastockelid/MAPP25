@@ -1650,7 +1650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &572618603
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4270,6 +4270,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 2107189762}
   settingsMenu: {fileID: 1745429161}
   GameOverUI: {fileID: 1982968606}
+  ExitButton: {fileID: 1569800899}
 --- !u!1 &1537773839
 GameObject:
   m_ObjectHideFlags: 0
